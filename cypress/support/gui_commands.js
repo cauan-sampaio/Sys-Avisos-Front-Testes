@@ -50,3 +50,20 @@ Cypress.Commands.add('crudExcluir', (
       }
       crudExcluir();
   })
+
+  Cypress.Commands.add('crudAvisos', (
+
+  ) => {
+    const crudAvisos = () => {
+      cy.get(':nth-child(1) > .cards > .cards-content > .ng-star-inserted').click()
+      cy.get('#mat-input-2').type('                   ')
+      cy.wait(2000)
+      cy.get('#mat-input-3').type('                   ')
+      cy.wait(2000)
+      cy.get('.save > button').click()
+      cy.wait(2000)
+      cy.get('.button-apresentar').click()
+      cy.wait(5000)
+    }
+    crudAvisos();
+  })
